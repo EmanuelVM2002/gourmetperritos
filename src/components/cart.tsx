@@ -26,7 +26,7 @@ export function CartButton() {
           exit={{ opacity: 0, y: 30, scale: 0.8 }}
           whileTap={{ scale: 0.94 }}
           className="fixed bottom-5 right-4 z-40 flex h-14 items-center gap-3 rounded-full bg-coral pl-5 pr-2 font-bold shadow-[0_18px_40px_-10px_rgb(240_82_67/0.7)] transition hover:bg-coral-deep sm:right-6"
-          aria-label={`Abrir mi pedido: ${count} productos, ${formatCOP(subtotal)}`}
+          aria-label={`Abrir mi pedido: ${count} ${count === 1 ? "producto" : "productos"}, ${formatCOP(subtotal)}`}
         >
           <ShoppingBag size={20} />
           <span className="hidden text-sm sm:inline">{count > 0 ? formatCOP(subtotal) : "Mi pedido"}</span>

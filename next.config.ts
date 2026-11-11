@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Sitio 100 % estático: se publica la carpeta `out` (Cloudflare Pages, GitHub Pages...).
+  output: "export",
   images: {
-    formats: ["image/avif", "image/webp"],
-    qualities: [60, 75, 80],
+    // El optimizador de imágenes de Next necesita un servidor; en hosting estático se sirven tal cual.
+    unoptimized: true,
   },
 };
 
