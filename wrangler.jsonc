@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "gourmetperritos",
+  "compatibility_date": "2026-11-01",
+  // Sitio estático: `npm run build` genera la carpeta `out` y Cloudflare la publica tal cual.
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
